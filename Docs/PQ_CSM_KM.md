@@ -199,8 +199,21 @@ Table.Combine
 
 | Файл | Назначение |
 |------|------------|
-| `OUT/PQ_Script_CSM_KM.pq` | **Актуальный скрипт** |
+| `OUT/PQ_Script_CSM_KM.pq` | **Базовый скрипт** (только TN) |
+| `OUT/PQ_Script_CSM_KM_Lizing.pq` | Скрипт Лизинг (TN + FIO) |
+| `Docs/PQ_CSM_KM_Lizing.md` | Документация Лизинг |
 | `ROADMAP.md` | Дорожная карта |
-| `TechZ.md` | Базовое ТЗ (12 колонок, без FULL_NAME) |
+| `TechZ.md` | Базовое ТЗ |
 | `ToDo PQ CSM.txt` | Исходное задание |
 | `PQ_Script (PP).PQ` | Устаревшая версия |
+
+---
+
+## 10. Вариант «Лизинг»
+
+Для преобразования **ФИО → табельный** через справочник `_data_fio`:
+
+- **Скрипт:** `OUT/PQ_Script_CSM_KM_Lizing.pq`
+- **Документация:** [`Docs/PQ_CSM_KM_Lizing.md`](PQ_CSM_KM_Lizing.md)
+
+Параметр `type_ind` (`TN` / `FIO`) в `_param_baseN`, 15 выходных колонок (добавлены `FIO` и `ТАБЕЛЬНЫЙ НЕ НАЙДЕН`).
